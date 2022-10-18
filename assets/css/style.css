@@ -11,7 +11,9 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 /*   Grid geral   */
@@ -85,14 +87,47 @@ img {
   background: #b07dfb;
 }
 
+/*   content   */
 .content {
   grid-area: content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
+.col-wide {
+  grid-column: 1 / -1;
+}
+
+.imagem-1 {
+  grid-row: span 2;
+  align-self: end;
+}
+
+.imagem-2 {
+  align-self: end;
+}
+
+/*   anuncios   */
 .anuncios {
   grid-area: anuncios;
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
 }
 
+/*   footer   */
 .footer {
   grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  padding: 30px;
 }
